@@ -6,8 +6,8 @@ If (-not(Test-Path -Path C:\Windows\System32\GroupPolicy)) {
     New-Item -Path C:\Windows\System32 -Name GroupPolicy -ItemType Directory
 }
 
-Write-Host 'Download https://stazurevirtualdesktop01.blob.core.windows.net/localgpo/gpt.ini file'
-Invoke-WebRequest -Uri https://stazurevirtualdesktop01.blob.core.windows.net/localgpo/gpt.ini -OutFile C:\Windows\System32\GroupPolicy\gpt.ini
+Write-Host 'Download https://raw.githubusercontent.com/jdestombes/avd/main/Dev/gpt.ini file'
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/jdestombes/avd/main/Dev/gpt.ini -OutFile C:\Windows\System32\GroupPolicy\gpt.ini
 
 If (-not(Test-Path -Path C:\Windows\System32\GroupPolicy\User)) {
     Write-Host 'Create C:\Windows\System32\GroupPolicy\User folder'
@@ -18,7 +18,7 @@ If (-not(Test-Path -Path C:\Windows\System32\GroupPolicy\Machine)) {
     New-Item -Path C:\Windows\System32\GroupPolicy -Name Machine -ItemType Directory
 }
 
-Write-Host 'Download https://stazurevirtualdesktop01.blob.core.windows.net/localgpo/Registry_User.pol file'
-Invoke-WebRequest -Uri https://stazurevirtualdesktop01.blob.core.windows.net/localgpo/Registry_User.pol -OutFile C:\Windows\System32\GroupPolicy\User\Registry.pol
+Write-Host 'Download https://github.com/jdestombes/avd/raw/main/Dev/Registry_User.pol file'
+Invoke-WebRequest -Uri https://github.com/jdestombes/avd/raw/main/Dev/Registry_User.pol -OutFile C:\Windows\System32\GroupPolicy\User\Registry.pol
 
 gpupdate /force
