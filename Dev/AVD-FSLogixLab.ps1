@@ -2,7 +2,7 @@
 #Config FSLogix
 
 $registryPath = "HKLM:\SOFTWARE\FSLogix\Profiles"
-$ConnectionString = 'BlobEndpoint=https://storagefilesservice.blob.core.windows.net/;QueueEndpoint=https://storagefilesservice.queue.core.windows.net/;TableEndpoint=https://storagefilesservice.table.core.windows.net/;FileEndpoint=https://storagefilesservice.file.core.windows.net/;AccountName=storagefilesservice;AccountKey=1c2a4vs+lOh6tJH51oqNGVdORDHvoiGyWmYL/aDIJvwMEjvZA24DF9MtBATMhwgnzZiLOX97XQZV+ASt5JKSmg=='
+$ConnectionString = 'BlobEndpoint=https://storagefilesservice.blob.core.windows.net/;QueueEndpoint=https://storagefilesservice.queue.core.windows.net/;TableEndpoint=https://storagefilesservice.table.core.windows.net/;FileEndpoint=https://storagefilesservice.file.core.windows.net/;AccountName=storagefilesservice;AccountKey=UCNIxtFYBiRN8EH4PKwSUk6Gabadg5iuAHO8L/3gSiDQlQdhuT3Ga5O4GgbnDO8WJegJAOzs4sbH+AStUH6N5Q=='
 
 if(!(Test-path $registryPath)){
     try {
